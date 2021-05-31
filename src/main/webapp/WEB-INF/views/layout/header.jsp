@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
 <sec:authorize access="isAuthenticated()">
-   <!-- 세션은 아래 변수인 principal에서 찾을 수 있으로 jsp내에서는 해당변수를 이용할것 -->
-   <sec:authentication property="principal" var="principal"/>
+	<!-- 세션은 아래 변수인 principal에서 찾을 수 있으로 jsp내에서는 해당변수를 이용할것 -->
+	<sec:authentication property="principal" var="principal" />
 </sec:authorize>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 </head>
 <body>
-  	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
 		<a class="navbar-brand" href="/">Mr. JH Lee's Blog</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 			<span class="navbar-toggler-icon"></span>

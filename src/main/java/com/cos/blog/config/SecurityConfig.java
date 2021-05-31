@@ -29,9 +29,7 @@ import com.cos.blog.config.auth.PrincipalDetailService;
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
     
     @Autowired
-	private PrincipalDetailService principalDetailService;  
-    
-    
+	private PrincipalDetailService principalDetailService;      
     
 	@Bean
 	@Override
