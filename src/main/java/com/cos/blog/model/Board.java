@@ -59,15 +59,19 @@ public class Board {
 	//JoinColumn애노테이션을 사용하여 연결한다.
 	
 	@OneToMany(mappedBy="board",fetch=FetchType.EAGER, cascade=CascadeType.REMOVE) //mappedby가 적혀있으면 연관관계의 주인이 아니다.
+	//mappedBy: 양방향 관계 설정시 관계의 주체가 되는 쪽에서 정의합니다.
+	//fetch: FetchType.EAGER, FetchType.LAZY로 전략을 변경 할 수 있습니다. 두 전략의 차이점은 EAGER인 경우 관계된 Entity의 정보를 미리 읽어오는 것이고 LAZY는 실제로 요청하는 순간 가져오는겁니다.
+	//cascade: 현 Entity의 변경에 대해 관계를 맺은 Entity도 변경 전략을 결정합니다.
+    //              속성값에는 CascadeType라는 enum에 정의 되어 있음
+	//              (enum값: ALL, PERSIST, MERGE, REMOVE, REFRESH, DETACH)
+	
 	//즉, "나는 포린키(FK)가 아니예요"
 	//즉, DB에 컬럼을 만들지 마세요...
 	//상기의 "board"는 Replay클래스의 필드명(실제값을 저장하는 변수명)임에도 유의
 	
 	//아래와 같이 애노테이션을 설정하면...replys안에서 다시 board를 호출하게 될때 board는 게터호출을 무시하게
 	//설정이되어 무한 반복을 끊게 된다.(즉 이경우는 json으로 시리얼라이제이션하지 않는다=제이슨으로 파싱하지 않는다)
-	//@JsonIgnoreProperties({"board","user"})
-	
-	@JsonIgnoreProperties({"board"})
+	@JsonIgnoreProperties({"board"})//무한 참조 방지용 (왜냐하면 Reply객체 안에 또 Board객체를 포함하고 있음)
 	@OrderBy("id desc")
 	private List<Reply> replys;	
 	
