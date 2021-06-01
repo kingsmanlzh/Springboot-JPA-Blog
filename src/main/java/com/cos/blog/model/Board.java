@@ -48,7 +48,6 @@ public class Board {
 	@ManyToOne(/*fetch=FetchType.EAGER*/) //보드(Board)가 many이고 유저(User)가 one이라는 것을 의미함
 	//=> 즉, 한명(one)의 유저(User)는 여러개(many)의 보드(Board)를 쓸 수 있다는 의미	
 	//=>여러개의 게시글은 한명의 유저에 의해서 쓰일 수 있다는 의미
-
 	@JoinColumn(name="userId")
 	private User user;//DB는 오브젝트를 저장할 수 없다. 그래서 FK를 사용하는데
 	//객체 지향프로그래밍 언어같은 자바의 경우 오브젝트를 저장할 수 있다.

@@ -17,12 +17,11 @@ import com.cos.blog.dto.ResponseDto;
 import com.cos.blog.model.Board;
 import com.cos.blog.service.BoardService;
      
-@RestController//데이터만 리턴해 줄거기 때문에...
+@RestController//클라이언트에 처리 결과 데이터를 바로 리턴해 줄거기 때문에...
 public class BoardApiController {
     
 	@Autowired
-	private BoardService boardService;
-	
+	private BoardService boardService;	
 	
 	@PostMapping("/api/board")
 	public ResponseDto<Integer> save(@RequestBody Board board,
