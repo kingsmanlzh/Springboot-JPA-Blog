@@ -16,7 +16,7 @@ import com.cos.blog.dto.ResponseDto;
 import com.cos.blog.model.User;
 import com.cos.blog.service.UserService;
      
-@RestController//데이터만 리턴해 줄거기 때문에...
+@RestController//데이터만 리턴해 줄거기 때문에...//.jsp나 .html파일 리턴필요시는 @Controller를 사용할 것
 public class UserApiController {
 
 	@Autowired//Dependency Injection(DI)를 받아서 사용하기 위해

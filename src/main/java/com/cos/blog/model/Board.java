@@ -31,7 +31,7 @@ import lombok.NoArgsConstructor;
 @Builder//빌터패턴 사용
 
 //ORM ->Java(다른언어포함)의 Object ->DB Table로 맵핑해주는 기술
-@Entity//User클래스가 Mysql에 테이블이 생성된다.
+@Entity//Mysql에 "board"테이블을 생성한다
 public class Board {
 
 	@Id

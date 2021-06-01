@@ -15,7 +15,7 @@ let index={
 		let data={
 			username:$("#username").val(),
 			password:$("#password").val(),
-			email:$("#email").val(),
+			email:$("#email").val()
 		};		
 		//console.log(data);
 		//ajax호출시 디폴트가 비동기호출이다.
@@ -48,7 +48,7 @@ let index={
 			id:$("#id").val(),
 			username:$("#username").val(),
 			password:$("#password").val(),
-			email:$("#email").val(),
+			email:$("#email").val()
 		};	
 		$.ajax(
 				        {

@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 public class ResponseDto<T> {//클래스에 제너릭T를 걸어주고...
 	
 	  int status;
-	  T data;
+	  T data;//클래스에 걸려있는 제너릭형에 따른 변수
 
 }
