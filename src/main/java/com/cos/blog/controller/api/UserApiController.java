@@ -29,7 +29,7 @@ public class UserApiController {
 	public ResponseDto<Integer> save(@RequestBody User user) {
 		
 		//로그인하는 방식: 스프링 시큐리티 이용	
-		System.out.println("UserApiController: save호출됨");	
+		//System.out.println("UserApiController: save호출됨");	
 		userService.회원가입(user);
 		 return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);//자바 오브젝트를 JSON으로 리턴해줌 by Jackson라이브러리
 	}	

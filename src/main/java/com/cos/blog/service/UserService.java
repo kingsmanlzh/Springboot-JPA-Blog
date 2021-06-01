@@ -9,11 +9,10 @@ import com.cos.blog.model.RoleType;
 import com.cos.blog.model.User;
 import com.cos.blog.repository.UserRepository;
 
-//스프링이 컴포넌트 스캔을 통해서 Bean에 등록을 해줌(IoC를 해준다는 의미)
+//스프링이 컴포넌트 스캔을 통해서 Bean에 등록을 해줌(IoC를 해준다는 의미)=Ioc컨테이너에 등록(=bean컨테이너에 등록)
 //Ioc => Inversion of Control:"제어의 역전"
 //=> 스프링이 new하여 등록해준다.(프로그래머가 new하는 것을 대신해서...)
-//=>스프링이 new한다는것은 메모리에 프로그래머를 대신해서 이 클래스의
-//오브젝트를 메모리에 띄워준다는 의미이다.
+//=>스프링이 new한다는것은 메모리에 프로그래머를 대신해서 이 클래스의 오브젝트를 메모리에 띄워준다는 의미이다.
 @Service
 public class UserService {
 
