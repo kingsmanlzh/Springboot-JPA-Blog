@@ -42,7 +42,7 @@ public class BoardApiController {
 		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
 	}
 	
-	//데이터를 받을때 컨트롤러에서 dto를 만들어 받는것이 좋다
+	//데이터를 받을때 컨트롤러에서 dto를 만들어 받는것이 좋다.
 	//여기서 dto를 사용하지 않은 이유는
 	@PostMapping("/api/board/{boardId}/reply")
 	public ResponseDto<Integer> replySave(@RequestBody ReplySaveRequestDto replySaveRequestDto) {		
