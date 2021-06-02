@@ -4,7 +4,7 @@
 	<form action="/auth/loginProc" method="post">
        <div class="form-group">
 			<label for="username">User name</label> 
-			<input type="text" name="username" class="form-control" placeholder="Enter username" id="username">
+			<input  autofocus type="text" name="username" class="form-control" placeholder="Enter username" id="username">
 		</div>	
 		<div class="form-group">
 			<label for="pwd">Password</label> 

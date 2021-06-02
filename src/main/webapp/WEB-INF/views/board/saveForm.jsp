@@ -6,7 +6,7 @@
 	<form>
 		<div class="form-group">
 
-			<input type="text" class="form-control" placeholder="Enter title" id="title">
+			<input  autofocus type="text" class="form-control" placeholder="Enter title" id="title">
 		</div>
 		<div class="form-group">
 

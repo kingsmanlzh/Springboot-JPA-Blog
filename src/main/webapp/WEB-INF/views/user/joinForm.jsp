@@ -6,7 +6,7 @@
 		
 		<div class="form-group">
 			<label for="username">User name</label> 
-			<input type="text" class="form-control" placeholder="Enter username" id="username">
+			<input  autofocus type="text" class="form-control" placeholder="Enter username" id="username">
 		</div>
 		
 		<div class="form-group">

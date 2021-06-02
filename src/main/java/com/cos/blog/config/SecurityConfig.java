@@ -68,10 +68,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     	        .authenticated()
     	    .and()//계속...
     	        .formLogin()
-    	        .loginPage("/auth/loginForm")//로긴이 필요할 경우 (회원인증이 필요한 경우) 스프링 시큐리티의 디폴트 로긴 페이지 대신 이 페이지로 리다이렉션 시킴
-    	        //스프링 시큐리티가 해당 주소로 요청이 오는 로그인을 가로채서 대신 로그인을 해준다.
-    	        .loginProcessingUrl("/auth/loginProc")
-    	        //로그인이 정상적 성공시 갈 Uri설정
-    	        .defaultSuccessUrl("/");   
+    	           .loginPage("/auth/loginForm")//로긴이 필요할 경우 (회원인증이 필요한 경우) 스프링 시큐리티의 디폴트 로긴 페이지 대신 이 페이지로 리다이렉션 시킴
+	    	        //스프링 시큐리티가 해당 주소로 요청이 오는 로그인을 가로채서 대신 로그인을 해준다.
+	    	        .loginProcessingUrl("/auth/loginProc")
+	    	        //로그인이 정상적 성공시 갈 Uri설정
+	    	        .defaultSuccessUrl("/")
+    	    .and()
+    	        //로그아웃시 설정할 것들(이지현 2021.06.02추가)
+    	        .logout()
+	    	        .logoutUrl("/logout")
+	    	        .logoutSuccessUrl("/")
+	    	        .invalidateHttpSession(true);
     }
 }
