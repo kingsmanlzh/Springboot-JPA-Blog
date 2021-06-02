@@ -17,7 +17,7 @@ import com.cos.blog.config.auth.PrincipalDetailService;
 //셋트로 걸어준다는 점을 인식할것
 
 //bean(빈)등록이란? 스프링 컨테이너에서 객체를 관리할 수 있게 하는 것
-@Configuration
+@Configuration//아래 SecurityConfig 클래스 객체를 싱글톤으로 생성함
 
 //컨트롤러에 가서 실행되기 전에 아래 에노태이션이 동작해서...
 //아래의 주소로 들어오면 그냥통과..아니면 auth절차를 거쳐라라는

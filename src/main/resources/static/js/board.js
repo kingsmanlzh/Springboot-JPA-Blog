@@ -16,7 +16,7 @@ let index={
 			this.replySave();			
 		});	
 		
-		 
+		 //아래 replyDelete: function(boardId, replyId) 구동은 jsp에서 <a> 테크를 사용하므로 여기 클릭 함수 설정이 필요 없음
 	},
 		
 	save: function(){		

@@ -8,6 +8,8 @@ let index={
 		$("#btn-update").on("click",()=>{
 			this.update();			
 		});	
+		
+		//회원 가입 탈퇴에 대한 구현은 아직 되어 있지 않음
 	},
 		
 	save: function(){

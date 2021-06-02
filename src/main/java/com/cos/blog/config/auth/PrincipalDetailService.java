@@ -20,13 +20,13 @@ public class PrincipalDetailService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
-		/*User principal*/ User user= userRepository.findByUsername(username)
+		User principal= userRepository.findByUsername(username)
 				.orElseThrow(()->{
 					return new UsernameNotFoundException("해당 사용자를 찾을 수 없습니다:"+username);
 				});
 		//아래와 같이 실행하면 시큐리티의 세션에 유저 정보가 저장이 된다
 		
-		return new PrincipalDetail(user/*principal*/);
+		return new PrincipalDetail(principal);
 	}
 
 }
